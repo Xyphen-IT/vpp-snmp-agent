@@ -8,7 +8,6 @@ from __future__ import (
 
 import time
 import logging
-import agentx
 from agentx.dataset import DataSet
 from agentx.network import Network
 

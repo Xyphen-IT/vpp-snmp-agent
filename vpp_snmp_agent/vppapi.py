@@ -4,10 +4,7 @@ interface metadata.
 """
 
 from vpp_papi import VPPApiClient, VPPApiJSONFiles
-import os
-import fnmatch
 import logging
-import socket
 
 
 class NullHandler(logging.Handler):

@@ -62,7 +62,7 @@ def get_description_by_ifname(config, name):
     return None
 
 
-class MyAgent(agentx.Agent):
+class VppSnmpAgent(agentx.Agent):
     def setup(self):
         self.config = None
         if self._args.config:
@@ -402,7 +402,7 @@ def main():
     agentx.setup_logging(debug=args.debug)
 
     try:
-        a = MyAgent(server_address=args.address, period=args.period, args=args)
+        a = VppSnmpAgent(server_address=args.address, period=args.period, args=args)
         a.run()
     except Exception as e:
         print("Unhandled exception:", e)
